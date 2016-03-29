@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WHOIS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-combobox.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="img-responsive" src="img/title.png"></img></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Damas <span class="caret"></span></a>
+                        <ul class="dropdown-menu">            
+                            <li><a href="#">Top</a></li>
+                            <li><a href="#">Pantalones</a></li>
+                            <li><a href="#">Calzado</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caballeros <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          
+                          
+                           <li><a href="#">Top</a></li>
+                          <li><a href="#">Pantalones</a></li>
+                          <li><a href="#">Calzado</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Niños   <span class="caret"></span></a>
+                        <ul class="dropdown-menu"> 
+                          <li><a href="#">Top</a></li>
+                          <li><a href="#">Pantalones</a></li>
+                          <li><a href="#">Calzado</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                 <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                    <a href="verResultados.html" type="submit" class="btn btn-default"><i class="fa fa-search"></i></a>
+                </form> <!-- Search widget -->
+                <form class="navbar-form pull-right" role="search">
+                    <a href="verCarrito.html" type="submit" class="btn btn-default pull-right"><i class="fa fa-shopping-cart"></i> (2)</a>
+                   
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container page-content">
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-3 busqueda-avanzada-wrapper">
+               <div id="busqueda-avanzada" class="rounded-radius">
+                    <p class="lead">Búsqueda Avanzada</p>
+                    <form>       
+                          <div class="row form-group">
+                            <label class="col-xs-3 control-label">Para:</label>
+                         
+                            <div class="col-xs-9 col-xs-offset-3">    
+                                <select name="select1" id="select1">
+                                    <option value="1">Damas</option>
+                                    <option value="2">Caballeros</option>
+                                    <option value="3">Niños</option>
+                                    
+                                </select>
+                            </div>
+                          </div> <!-- Widget PARA -->
+
+                          <div class="row form-group">
+                            <label class="col-xs-3 control-label">Categoría:</label>
+                         
+                            <div class="col-xs-9 col-xs-offset-3">    
+                                <select disabled name="select2" id="select2">
+                                    <option value="1 1">Blusas</option>
+                                    <option value="1 1">Camisas</option>
+                                    <option value="1 1">Faldas</option>
+                                    <option value="1 1">Franelas</option>
+                                    <option value="1 1">Jeans</option>
+                                    <option value="1 1">Sweaters</option>    
+                                    <option value="1 2">Tacones</option>                
+                                    <option value="1 1">Vestidos</option>
+                                    <option value="1 2">Zapatos Deportivos</option>
+                                    <option value="2 2">Camisas</option>
+                                    <option value="2 1">Chemises</option>
+                                    <option value="2 1">Franelas</option>
+                                    <option value="2 1">Pijamas</option>
+                                    <option value="2 1">Jeans</option>
+                                    <option value="2 1">Shorts y Bermudas</option>
+                                    <option value="2 1">Sweaters</option>
+                                    <option value="2 2">Zapatos Deportivos</option>
+                                    <option value="2 2">Zapatos Casuales</option>
+                                    <option value="3 1">Camisas</option>
+                                    <option value="3 1">Chemises</option>
+                                    <option value="3 1">Pijamas</option>
+                                    <option value="3 1">Franelas</option>
+                                    <option value="3 1">Jeans</option>
+                                    <option value="3 1">Shorts y Bermudas</option>
+                                    <option value="3 1">Sweaters</option>
+                                    <option value="3 2">Zapatos Deportivos</option>
+                                    <option value="3 2">Zapatos Casuales</option>
+                                                                   
+                                </select>
+                            </div>
+                          </div> <!-- Widget Categoría -->
+                          
+                          <div class="row form-group">
+                            <label class="col-xs-3 control-label">Talla:</label>
+                         
+                            <div class="col-xs-9 col-xs-offset-3">    
+                                <select disabled name="select2" id="select3">
+                                    <option></option>
+                                    <option value="1">S</option>
+                                    <option value="1">M</option>
+                                    <option value="1">L</option>
+                                    <option value="1">XL</option>
+                                    <option value="1">XXL</option>
+                                    <option value="2">34-35</option>
+                                    <option value="2">36-37</option>
+                                    <option value="2">38-39</option>
+                                    <option value="2">40-41</option>
+                                    <option value="2">41-42</option> 
+                                    <option value="2">43-44</option> 
+                                    <option value="2">44-45</option> 
+                                </select>
+                            </div>
+                          </div> <!-- Widget Talla -->
+
+                          <div class="row form-group">
+                            <div class="col-md-3"></div>
+
+                            <div class="col-md-6">
+                                <button type="button" style="margin: 0 auto;" class="btn btn-default btn-sm rounded-radius" data-toggle="modal" data-target="#myModal">Más opciones</button>
+
+                                  <!-- Modal -->
+                                  <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog">
+                                    
+                                      <!-- Modal content-->
+                                      <div class="modal-content">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                          <h4 class="modal-title">Franelas para hombres - Más opciones</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                              <div class="container">
+                                                <div class="row">
+                                                  <div class="col-md-3">
+                                                    <div class="well">
+                                                      <h3>Tipo</h3>
+                                                        <div class="radio">
+                                                          <label><input class="cloth-type" type="radio" name="option" value="shortsleeves" checked>Manga Corta</label>
+                                                        </div>
+                                                        <div class="radio">
+                                                          <label><input class="cloth-type" type="radio" name="option" value="longsleeves">Manga Larga</label>
+                                                        </div>
+                                                        <div class="radio">
+                                                          <label><input class="cloth-type" type="radio" name="option" value="tank">Sin Mangas</label>
+                                                        </div>
+                                                    </div>
+                                                     <div class="well">
+                                                      <h3>Color</h3>
+                                                      <ul class="nav">
+                                                        <li class="color-preview" title="White" style="background-color:#ffffff;"></li>
+                                                        <li class="color-preview" title="Dark Heather" style="background-color:#616161;"></li>
+                                                        <li class="color-preview" title="Gray" style="background-color:#f0f0f0;"></li>
+                                                        <li class="color-preview" title="Charcoal" style="background-color:#5b5b5b;"></li>
+                                                        <li class="color-preview" title="Black" style="background-color:#222222;"></li>
+                                                        <li class="color-preview" title="Heather Orange" style="background-color:#fc8d74;"></li>
+                                                        <li class="color-preview" title="Heather Dark Chocolate" style="background-color:#432d26;"></li>
+                                                        <li class="color-preview" title="Salmon" style="background-color:#eead91;"></li>
+                                                        <li class="color-preview" title="Chesnut" style="background-color:#806355;"></li>
+                                                        <li class="color-preview" title="Dark Chocolate" style="background-color:#382d21;"></li>
+                                                        <li class="color-preview" title="Citrus Yellow" style="background-color:#faef93;"></li>
+                                                        <li class="color-preview" title="Avocado" style="background-color:#aeba5e;"></li>
+                                                        <li class="color-preview" title="Kiwi" style="background-color:#8aa140;"></li>
+                                                        <li class="color-preview" title="Irish Green" style="background-color:#1f6522;"></li>
+                                                        <li class="color-preview" title="Scrub Green" style="background-color:#13afa2;"></li>
+                                                        <li class="color-preview" title="Teal Ice" style="background-color:#b8d5d7;"></li>
+                                                        <li class="color-preview" title="Heather Sapphire" style="background-color:#15aeda;"></li>
+                                                        <li class="color-preview" title="Sky" style="background-color:#a5def8;"></li>
+                                                        <li class="color-preview" title="Antique Sapphire" style="background-color:#0f77c0;"></li>
+                                                        <li class="color-preview" title="Heather Navy" style="background-color:#3469b7;"></li>              
+                                                        <li class="color-preview" title="Cherry Red" style="background-color:#c50404;"></li>
+                                                      </ul>
+                                                    </div>                                                            
+                                                  </div>
+                                                  <div class="col-md-9">
+                                                    <div id="shirtDiv" class="page" style="width: 530px; height: 630px; position: relative; background-color: rgb(0, 0, 0);">
+                                                            <img id="tshirtFacing" src="img/shirt_front_shortsleeves.png"></img>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+                                        </div>
+                                      </div>
+                                      
+                                    </div>
+                                  </div>
+
+                            </div>
+                            <!-- Trigger the modal with a button -->
+                            
+
+                          </div>
+                          <hr>
+
+                          <div class="row form-group">
+                              <label class="col-xs-3 control-label">Ciudad:</label>
+                              <div class="col-xs-10">
+                              <select class="form-control combobox">
+                                  <option>Caracas</option>
+                                  <option value="BAR">Barquisimeto</option>
+                                  <option value="CAR">Caracas</option>
+                                  <option value="VAL">Valencia</option>
+                                  <option value="MB">Maracaibo</option>
+                                  <option value="MY">Maracay</option>
+                                  <option value="PC">Pto La Cruz</option>
+                                  <option value="ME">Merida</option>
+                              </select>
+                              </div>
+                          </div>
+
+                          <div class="row form-group">
+                                <label class="col-xs-3 control-label">Punto&nbsp;de&nbsp;Referencia:</label>
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="Ej: Plaza Altamira">
+                                </div>
+                          </div>
+                          <hr>
+                        
+                          <div class="row form-group intervalo-precio">
+                              <label class="col-xs-9 control-label">Precio(Bs):</label>
+                              <div class="col-xs-3"></div>
+                              <br/>
+                              <div class="col-xs-6">                        
+                              <input class="input-sm" type="number" name="price"
+                                    pattern="[0-9]+([\.,][0-9]+)?" step="0.1"
+                                    title="This should be a number with up to 2 decimal places." placeholder="Min">
+
+                              </div> 
+                              <div class="col-xs-6"> 
+                              <input class="input-sm" type="number" name="price"
+                                    pattern="[0-9]+([\.,][0-9]+)?" step="1"
+                                    title="This should be a number with up to 2 decimal places."
+                                     placeholder="Max">
+                              </div>
+                          </div>
+                              
+                          <div class="row">
+                            <div class="col-xs-6 col-xs-offset-3">
+                              <a href="verResultados.html" class="btn btn-default btn-lg submit">Buscar</a>
+                            </div>
+                          </div>
+                    </form>
+                </div> <!-- busqueda avanzada -->   
+            </div> <!-- col-md-3 -->
+
+            <div class="col-md-9">
+               
+                <div class="row" id="carousel">
+                       <iframe src="wowslider.html" style="overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+                </div> <!-- Carousel -->
+
+                <div class="row gallery">
+                    <h2 class="section-title">Productos destacados</h2>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a href="verProductoshirt1.html"><img src="img/shirt1.png" alt="shirt"></a>
+                            <div class="caption">
+                                <h4 class="pull-right">Bs. 13.999,00</h4>
+                                <h4><a href="verProducto.html">First Product</a>
+                                </h4>
+                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                                <h4 class="city">Caracas</h4>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 valoraciones</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                             <a href="verProductoshirt2.html"><img src="img/shirt2.png" alt="shirt"></a>
+                            <div class="caption">
+                                <h4 class="pull-right">Bs. 24.999,00</h4>
+                                <h4><a href="#">Second Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4 class="city">Valencia</h4>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">12 valoraciones</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a href="verProductoskirt1.html"><img src="img/skirt11.png" alt="skirt"></a>
+                            <div class="caption">
+                                <h4 class="pull-right">Bs. 41.999,00</h4>
+                                <h4><a href="#">Third Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4  class="city">Maracay</h4>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">31 valoraciones</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/kshirt1.png" alt="kid shirt">
+                            <div class="caption">
+                                <h4 class="pull-right">Bs. 15.499,00</h4>
+                                <h4><a href="#">Fourth Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4 class="city">Caracas</h4>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">6 valoraciones</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a href="verProductojeans1.html"><img src="img/jeans1.png" alt="jeans"></a>
+                            <div class="caption">
+                                <h4 class="pull-right">Bs. 25.600,00</h4>
+                                <h4><a href="#">Fifth Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4 class="city">Barquisimeto</h4>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">18 valoraciones</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                             <a href="verProductoshoes1.html"><img src="img/shoes2.png" alt="shoes"></a>
+                            <div class="caption">
+                                <h4 class="pull-right">Bs. 22.600,00</h4>
+                                <h4><a href="#">Fifth Product</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h4 class="city">Barquisimeto</h4>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">18 valoraciones</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                </div> <!-- Productos destacados -->
+           
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Whois Augmented 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/bootstrap-combobox.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.combobox').combobox();
+
+
+        $("#select1").change(function() {
+            $('#select3').attr('disabled',true);
+            $('#select3').val(null);
+            $('#select2').attr('disabled',false);
+            if ($(this).data('options') == undefined) {
+                /*Taking an array of all options-2 and kind of embedding it on the select1*/
+                $(this).data('options', $('#select2 option').clone());
+            }
+
+            var paraId = $(this).val();
+            var list = $(this).data('options');
+            var options = $(this).data('options').filter(function(opt){
+                var id = list[opt].value.split(" ")[0];
+                return paraId == id;
+            });
+            $('#select2').html(options);
+        });
+
+         $("#select2").change(function() {
+            $('#select3').attr('disabled',false);
+             if ($(this).data('options') == undefined) {
+                /*Taking an array of all options-2 and kind of embedding it on the select2*/
+                $(this).data('options', $('#select3 option').clone());
+            }
+
+            var value = $(this).val().split(" ");
+            var catId = value[1];
+            var options = $(this).data('options').filter('[value=' + catId + ']');
+            $('#select3').html(options);
+         });
+
+        $("#select1").change();   
+        });
+
+    </script>
+    <script src="js/clothesEditor.js" type="text/javascript" charset="utf-8" async defer>  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Carrito de Compras</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap-combobox.css" rel="stylesheet">
+
+    
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style type="text/css">
+       #myModal .modal-dialog{
+        width: 40%;
+        background: #fff;
+       }
+       table.table img{
+        display: inline-block;
+        margin-right: 40px;
+       }
+       table.table>tbody>tr>.hidden-phone,
+       table.table>thead>tr>.hidden-phone{
+        text-align: center;
+        vertical-align: middle;
+       }
+
+       table.table>tbody>#totalRow{
+            font-size: 20px;
+            font-weight: bolder;
+            border-radius: 15px;
+           /* background: rgba(245, 245, 245, 1);*/
+       }
+
+       table.table{
+        background: #fff;
+        border-radius: 15px;
+       }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="img-responsive" src="img/title.png"></img></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Damas <span class="caret"></span></a>
+                        <ul class="dropdown-menu">            
+                            <li><a href="#">Top</a></li>
+                            <li><a href="#">Pantalones</a></li>
+                            <li><a href="#">Calzado</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Caballeros <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          
+                          
+                           <li><a href="#">Top</a></li>
+                          <li><a href="#">Pantalones</a></li>
+                          <li><a href="#">Calzado</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Niños   <span class="caret"></span></a>
+                        <ul class="dropdown-menu"> 
+                          <li><a href="#">Top</a></li>
+                          <li><a href="#">Pantalones</a></li>
+                          <li><a href="#">Calzado</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                 <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                    <a href="verResultados.html" type="submit" class="btn btn-default"><i class="fa fa-search"></i></a>
+                </form> <!-- Search widget -->
+                <form class="navbar-form pull-right" role="search">
+                    <a type="submit" class="btn btn-default pull-right active"><i class="fa fa-shopping-cart"></i> (3)</a>
+                   
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container page-content">
+
+       
+
+        <div class="row">
+            
+             <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h3 id="myModalLabel">Remover Artículo</h3>
+                        </div>
+                        <div class="modal-body">
+                           <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">No</button>
+                            <button class="btn btn-default"data-dismiss="modal" class="btn red" id="btnYes">Sí</button>
+                        </div>
+                </div>
+            </div>
+            
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a>
+                </li>
+                <li>Carrito de Compras</li>
+                
+            </ol>
+            
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            
+                            <th class="hidden-phone"></th>
+                            <th></th>
+                            <th></th>
+                            <th class="hidden-phone">Cantidad</th>
+                            <th class="hidden-phone">Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="rounded-radius">
+                        
+                        <tr>
+                            
+                            <td><img src="http://placehold.it/150x150" alt="" class="img-responsive"></img><b>Artículo1</b></td>
+                            <td></td>
+                            <td></td>
+                            <td class="hidden-phone">2</td> 
+                            <td class="hidden-phone">Bs. 24.000</td>
+                                                              
+
+                            <td class="hidden-phone"><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="johnny" data-id="1"><i style="color: #f00; font-size: 20px;" class="fa fa-times"></i></a></td>
+                        </tr>
+                        <tr>
+                            
+                            <td><img src="http://placehold.it/150x150" alt="" class="img-responsive"></img><b>Artículo2</b></td>
+                            <td></td>
+                            <td></td>
+                            <td class="hidden-phone">1</td>
+                            <td class="hidden-phone">Bs. 12.000</td>                                           
+                            <td class="hidden-phone"><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="kitty" data-id="2"><i style="color: #f00; font-size: 20px;" class="fa fa-times"></i></a></td>
+                        </tr>
+                        <tr id="totalRow">
+                            
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="hidden-phone"><b>Total:<b></td>
+                            <td class="hidden-phone">Bs. 36.000</td>                                           
+                            <td class="hidden-phone"><a class="btn btn-default btn-lg">Pagar</a></td>
+                        </tr>
+                    
+                    </tbody>
+
+                </table>
+            </div>
+
+
+            
+        </div>
+
+        
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Whois Augmented 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#myModal').on('show', function() {
+                
+                
+                var id = $(this).data('id'),
+                removeBtn = $(this).find('.danger');
+             });
+
+            $('.confirm-delete').on('click', function(e) {
+                e.preventDefault();
+                var id = $(this).data('id');
+                $('#myModal').modal('show');
+                var tit = $(this).data('title');
+                $('#myModal .modal-body p').html("Desea remover el artículo " + '<b>' + tit +'</b>' + ' del carrito de compras?');
+            });
+
+            $('#btnYes').click(function() {
+            // handle deletion here
+                var id = $('#myModal').data('id');
+                $('[data-id='+id+']').parents('tr').remove();
+                $('#myModal').modal('hide');
+        
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
