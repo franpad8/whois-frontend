@@ -32,6 +32,8 @@
        table.table img{
         display: inline-block;
         margin-right: 40px;
+        margin-left: 40px;
+        width:100px;
        }
        table.table>tbody>tr>.hidden-phone,
        table.table>thead>tr>.hidden-phone{
@@ -49,7 +51,10 @@
        table.table{
         background: #fff;
         border-radius: 15px;
+
        }
+
+      
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -176,23 +181,32 @@
                         
                         <tr>
                             
-                            <td><img src="http://placehold.it/150x150" alt="" class="img-responsive"></img><b>Artículo1</b></td>
+                            <td><img src="img/shirt1.png" alt="" class="img-responsive"></img><b>Franelas Quiksilver Hurley Latin Wave Dc Shoes Volcom Vans</b></td>
                             <td></td>
                             <td></td>
                             <td class="hidden-phone">2</td> 
-                            <td class="hidden-phone">Bs. 24.000</td>
+                            <td class="hidden-phone">Bs. 24.000,00</td>
                                                               
 
-                            <td class="hidden-phone"><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="johnny" data-id="1"><i style="color: #f00; font-size: 20px;" class="fa fa-times"></i></a></td>
+                            <td class="hidden-phone"><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="Franelas Quiksilver Hurley Latin Wave" data-id="1"><i style="color: #f00; font-size: 20px;" class="fa fa-times"></i></a></td>
                         </tr>
                         <tr>
                             
-                            <td><img src="http://placehold.it/150x150" alt="" class="img-responsive"></img><b>Artículo2</b></td>
+                            <td><img src="img/jeans1.png" alt="" class="img-responsive"></img><b>Jeans Pantalones Levis 501 De Caballero</b></td>
                             <td></td>
                             <td></td>
                             <td class="hidden-phone">1</td>
-                            <td class="hidden-phone">Bs. 12.000</td>                                           
-                            <td class="hidden-phone"><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="kitty" data-id="2"><i style="color: #f00; font-size: 20px;" class="fa fa-times"></i></a></td>
+                            <td class="hidden-phone">Bs. 22.000,00</td>                                           
+                            <td class="hidden-phone"><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="Jeans Pantalones Levis 501 De Caballero" data-id="2"><i style="color: #f00; font-size: 20px;" class="fa fa-times"></i></a></td>
+                        </tr>
+                        <tr>
+                            
+                            <td><img src="img/shoes1.png" alt="" class="img-responsive"></img><b>Zapatos Nike Free Run Adidas Maraton Air Max, Turbulence</b></td>
+                            <td></td>
+                            <td></td>
+                            <td class="hidden-phone">1</td>
+                            <td class="hidden-phone">Bs. 17.000,00</td>                                           
+                            <td class="hidden-phone"><a href="#" class="confirm-delete btn mini red-stripe" role="button" data-title="Zapatos Nike Free Run Adidas" data-id="3"><i style="color: #f00; font-size: 20px;" class="fa fa-times"></i></a></td>
                         </tr>
                         <tr id="totalRow">
                             
@@ -200,7 +214,7 @@
                             <td></td>
                             <td></td>
                             <td class="hidden-phone"><b>Total:<b></td>
-                            <td class="hidden-phone">Bs. 36.000</td>                                           
+                            <td id="total" class="hidden-phone">Bs. 63.000,00</td>                                           
                             <td class="hidden-phone"><a class="btn btn-default btn-lg">Pagar</a></td>
                         </tr>
                     
@@ -245,6 +259,7 @@
             $('.confirm-delete').on('click', function(e) {
                 e.preventDefault();
                 var id = $(this).data('id');
+                $('#myModal').data('id', id);
                 $('#myModal').modal('show');
                 var tit = $(this).data('title');
                 $('#myModal .modal-body p').html("Desea remover el artículo " + '<b>' + tit +'</b>' + ' del carrito de compras?');
@@ -253,8 +268,10 @@
             $('#btnYes').click(function() {
             // handle deletion here
                 var id = $('#myModal').data('id');
+
                 $('[data-id='+id+']').parents('tr').remove();
                 $('#myModal').modal('hide');
+                $('td#total').text("Bs. 46.000,00");
         
             });
 

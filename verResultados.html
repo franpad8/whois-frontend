@@ -276,15 +276,15 @@
                           <div class="row form-group">
                               <label class="col-xs-3 control-label">Ciudad:</label>
                               <div class="col-xs-10">
-                              <select class="form-control combobox">
+                              <select id="cities" class="form-control combobox">
                                   <option>Caracas</option>
-                                  <option value="BAR">Barquisimeto</option>
-                                  <option value="CAR">Caracas</option>
-                                  <option value="VAL">Valencia</option>
-                                  <option value="MB">Maracaibo</option>
-                                  <option value="MY">Maracay</option>
-                                  <option value="PC">Pto La Cruz</option>
-                                  <option value="ME">Merida</option>
+                                  <option value="Barquisimeto">Barquisimeto</option>
+                                  <option value="Caracas">Caracas</option>
+                                  <option value="Valencia">Valencia</option>
+                                  <option value="Maracaibo">Maracaibo</option>
+                                  <option value="Maracay">Maracay</option>
+                                  <option value="Pto La Cruz">Pto La Cruz</option>
+                                  <option value="Mérida">Mérida</option>
                               </select>
                               </div>
                           </div>
@@ -302,13 +302,13 @@
                               <div class="col-xs-3"></div>
                               <br/>
                               <div class="col-xs-6">                        
-                              <input class="input-sm" type="number" name="price"
+                              <input id="precioMin" class="input-sm" type="number" name="price" value="0"
                                     pattern="[0-9]+([\.,][0-9]+)?" step="0.1"
                                     title="This should be a number with up to 2 decimal places." placeholder="Min">
 
                               </div> 
                               <div class="col-xs-6"> 
-                              <input class="input-sm" type="number" name="price"
+                              <input id="precioMax" class="input-sm" type="number" name="price" value="50000"
                                     pattern="[0-9]+([\.,][0-9]+)?" step="1"
                                     title="This should be a number with up to 2 decimal places."
                                      placeholder="Max">
@@ -327,7 +327,7 @@
                         <label id="resultscount" class=""> <p>Artículos:<strong> 1-15 de 302</strong></p></label>
                         
                         <label id="orderwidget" class="pull-right"> <p>Ordenar por: </p>
-                            <select name="selectOrd" id="selectord">
+                            <select name="selectOrd" id="selectOrd">
                                         <option value="1">Mayor Precio</option>
                                         <option value="2">Menor Precio</option>
                                         <option value="3">Mayor Valoración</option>
@@ -346,350 +346,7 @@
                     <div class="tab-content">
                         <div id="todos" class="tab-pane fade in active">
                             <div class="row gallery">
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos1" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 20.600,00</h4>
-                                            <h4><a href="#">First Product</a>
-                                            </h4>
-                                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                                            <h4 class="city">Caracas</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">15 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos2" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 19.999,00</h4>
-                                            <h4><a href="#">Second Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Valencia</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">12 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos3" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 19.499,00</h4>
-                                            <h4><a href="#">Third Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4  class="city">Maracay</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">31 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="clearfix"></div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos4" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 17.499,00</h4>
-                                            <h4><a href="#">Fourth Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Caracas</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">6 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos5" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 16.999,00</h4>
-                                            <h4><a href="#">Fifth Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Barquisimeto</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">18 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos6" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 16.999,00</h4>
-                                            <h4><a href="#">First Product</a>
-                                            </h4>
-                                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                                            <h4 class="city">Caracas</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">15 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos7" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 16.699,00</h4>
-                                            <h4><a href="#">Second Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Valencia</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">12 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos8" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 16.599,00</h4>
-                                            <h4><a href="#">Third Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4  class="city">Maracay</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">31 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos9" href="#"><img src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 16.499,00</h4>
-                                            <h4><a href="#">Fourth Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Caracas</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">6 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos10" href="#"><img  src="http://placehold.it/250x150" alt=""></a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 15.499,00</h4>
-                                            <h4><a href="#">Fifth Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Barquisimeto</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">18 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos11" href="#"><img  src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 14.999,00</h4>
-                                            <h4><a href="#">First Product</a>
-                                            </h4>
-                                            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-                                            <h4 class="city">Caracas</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">15 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos12" href="#"><img  src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 13.999,00</h4>
-                                            <h4><a href="#">Second Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Valencia</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">12 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos13" href="#"><img  src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 11.999,00</h4>
-                                            <h4><a href="#">Third Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4  class="city">Maracay</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">31 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos14" href="#"><img  src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 11.999,00</h4>
-                                            <h4><a href="#">Fourth Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Caracas</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">6 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail">
-                                        <a id="restodos15" href="#"><img  src="http://placehold.it/250x150" alt=""> </a>
-                                        <div class="caption">
-                                            <h4 class="pull-right">Bs. 11.600,00</h4>
-                                            <h4><a href="#">Fifth Product</a>
-                                            </h4>
-                                            <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                            <h4 class="city">Barquisimeto</h4>
-                                        </div>
-                                        <div class="ratings">
-                                            <p class="pull-right">18 valoraciones</p>
-                                            <p>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star"></span>
-                                                <span class="glyphicon glyphicon-star-empty"></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                
 
                     
                             </div> <!-- row -->
@@ -762,12 +419,375 @@
     <script src="js/bootstrap-combobox.js"></script>
 
     <script type="text/javascript">
-        var cat="shirt";
+
         $(document).ready(function(){
 
             $("#resultados").hide();
             $('.combobox').combobox();
         });
+
+        var cat="shirt";
+        var shirts = [
+            {"name": "Franela 1",
+             "description": "Breve descripción",
+             "price": 20600,
+             "photo":"img/shirt1.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshirt1.html"},
+            {"name": "Franela 2",
+             "description": "Breve descripción",
+             "price":  19999,
+             "photo":"img/shirt2.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoshirt2.html"},
+            {"name": "Franela 3",
+             "description": "Breve descripción",
+             "price":  20200,
+             "photo":"img/shirt3.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoshirt1.html"},
+             {"name": "Franela 4",
+             "description": "Breve descripción",
+             "price": 18600,
+             "photo":"img/shirt4.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshirt1.html"},
+            {"name": "Franela 5",
+             "description": "Breve descripción",
+             "price":  17999,
+             "photo":"img/shirt5.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoshirt2.html"},
+            {"name": "Franela 6",
+             "description": "Breve descripción",
+             "price":  22400,
+             "photo":"img/shirt6.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoshirt1.html"},
+             {"name": "Franela 7",
+             "description": "Breve descripción",
+             "price": 14300,
+             "photo":"img/shirt7.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshirt1.html"},
+            {"name": "Franela 8",
+             "description": "Breve descripción",
+             "price":  15999,
+             "photo":"img/shirt8.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoshirt2.html"},
+            {"name": "Franela 9",
+             "description": "Breve descripción",
+             "price":  20200,
+             "photo":"img/shirt9.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoshirt1.html"}
+        ];
+         var jeans = [
+            {"name": "Pantalones 1",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 20600,
+             "photo":"img/jeans1.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductojeans1.html"},
+            {"name": "Pantalones 2",
+             "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem" ,
+             "price":  19999,
+             "photo":"img/jeans2.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoshirt2.html"},
+            {"name": "Pantalones 3",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  20200,
+             "photo":"img/jeans3.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductojeans1.html"},
+             {"name": "Pantalones 4",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 18600,
+             "photo":"img/jeans4.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductojeans1.html"},
+            {"name": "Pantalones 5",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  17999,
+             "photo":"img/jeans5.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductojeans2.html"},
+            {"name": "Pantalones 6",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  22400,
+             "photo":"img/jeans6.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductojeans1.html"},
+             {"name": "Pantalones 7",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 14300,
+             "photo":"img/jeans7.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductojeans1.html"},
+            {"name": "Pantalones 8",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  15999,
+             "photo":"img/jeans8.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductojeans2.html"},
+            {"name": "Pantalones 9",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  20200,
+             "photo":"img/jeans9.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductojeans1.html"}
+        ];
+         var shoes = [
+            {"name": "Zapatos Deportivos 1",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 20200,
+             "photo":"img/shoes1.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshoes1.html"},
+            {"name": "Zapatos Deportivos 2",
+             "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem" ,
+             "price":  22600,
+             "photo":"img/shoes2.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoshoes1.html"},
+            {"name": "Zapatos Deportivos 3",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  22500,
+             "photo":"img/shoes3.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoshoes2.html"},
+             {"name": "Zapatos Deportivos 4",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 18600,
+             "photo":"img/shoes4.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshoes1.html"},
+            {"name": "Zapatos Deportivos 5",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  17999,
+             "photo":"img/shoes5.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoshoes2.html"},
+            {"name": "Zapatos Deportivos 6",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  22400,
+             "photo":"img/shoes6.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoshoes1.html"},
+             {"name": "Zapatos Deportivos 7",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 14300,
+             "photo":"img/shoes7.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshoes1.html"},
+            {"name": "Zapatos Deportivoss 8",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  15999,
+             "photo":"img/shoes8.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoshoes2.html"},
+            {"name": "Zapatos Deportivos 9",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  20200,
+             "photo":"img/shoes9.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoshoes1.html"}
+        ];
+        var skirt = [
+            {"name": "Falda 1",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 20200,
+             "photo":"img/skirt1.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoskirt1.html"},
+            {"name": "Falda 2",
+             "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem" ,
+             "price":  22600,
+             "photo":"img/skirt2.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoskirt1.html"},
+            {"name": "Falda 3",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  22500,
+             "photo":"img/skirt3.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoskirt2.html"},
+             {"name": "Falda 4",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 18600,
+             "photo":"img/skirt4.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshkirt.html"},
+            {"name": "Falda 5",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  17999,
+             "photo":"img/skirt5.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoskirt2.html"},
+            {"name": "Falda 6",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  22400,
+             "photo":"img/skirt6.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoskirt1.html"},
+             {"name": "Falda 7",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price": 14300,
+             "photo":"img/skirt7.png",
+             "city": "Caracas",
+             "stars": 3,
+             "url": "verProductoshkirt.html"},
+            {"name": "Faldas 8",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  15999,
+             "photo":"img/skirt8.png",
+             "city": "Valencia",
+             "stars": 5,
+             "url": "verProductoskirt2.html"},
+            {"name": "Falda 9",
+             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum delectus consectetur nulla eligendi fuga autem",
+             "price":  20200,
+             "photo":"img/skirt9.png",
+             "city": "Caracas",
+             "stars": 4,
+             "url": "verProductoskirt1.html"}
+        ];
+
+        var currentArticles = shirts;
+        var currentArticlesOriginal = shirts;
+
+        function updateResults(articles){
+            var thumbnails="";    
+            for (var s in articles){
+                var stars="";
+                for(var i=0; i < articles[s]["stars"]; i++){
+                    stars += '<span class="glyphicon glyphicon-star"></span>';
+                }
+                thumbnails += '<div class="col-sm-6 col-md-4">'+
+                                        '<div class="thumbnail">'+
+                                            '<a id="restodos1" href="'+articles[s]["url"]+'"><img src="' + articles[s]["photo"] + '" alt=""> </a>'+
+                                            '<div class="caption">'+
+                                                '<h4 class="pull-right">Bs. '+ articles[s]["price"] +',00</h4>'+
+                                                '<h4><a href="#">'+ articles[s]["name"] +'</a>'+
+                                                '</h4>'+
+                                                '<p>'+ articles[s]["description"] +'</p>'+
+                                                '<h4 class="city">'+ shirts[s]["city"] +'</h4>'+
+                                            '</div>'+
+                                            '<div class="ratings">'+
+                                               ' <p class="pull-right">15 valoraciones</p>'+
+                                                '<p>'+ stars +
+                                                '</p>'+
+                                            '</div>'+
+                                        '</div>'+
+                        '</div>';
+            }
+            $("#todos .gallery").html(thumbnails);
+        }
+
+
+        
+
+        /* Generic Auxiliar sorting function */
+        function keysrt(key) {
+            return function(a,b){
+                if (a[key] > b[key]) return 1;
+                if (a[key] < b[key]) return -1;
+                return 0;
+            }
+        }
+
+        function sortResults(articles, key, desc){
+            if (!desc) {
+                currentArticles = articles.sort(keysrt(key))
+                updateResults(currentArticles);
+            }
+            else { 
+                currentArticles = articles.sort(keysrt(key)).reverse();
+                updateResults(currentArticles);
+            }
+
+        }
+
+        function filterResultsByCity(articles, city){
+            currentArticles = articles.filter(function(art){
+                    return art["city"] == city;
+            });
+            updateResults(currentArticles);
+        }
+
+        function filterResultsByPrice(articles, min, max){
+            currentArticles = articles.filter(function(art){
+                    return art["price"] > min && art["price"] < max;
+            });
+            updateResults(currentArticles);
+        }
+
+        function backToOriginalResults(){
+            currentArticles = currentArticlesOriginal;
+            updateResults(currentArticles);
+        }
+
+        
+        sortResults(currentArticles, "price", true);
+
+        $("#selectOrd").change(function(){
+            var ord = $(this).val();
+            if (ord == 1) sortResults(currentArticles, "price", true);
+            else if (ord == 2) sortResults(currentArticles, "price", false);
+            else sortResults(currentArticles, "stars", true);
+        });
+
+        $("select.combobox").on("change", function () {
+            var city = $(this).val();
+            if (city != null)
+                filterResultsByCity(currentArticles, city);
+            else
+                backToOriginalResults();
+        });
+
+        $("#precioMin").focusout(function(){
+            filterResultsByPrice(currentArticles, $(this).val(), $("#precioMax").val());
+        });
+
+        $("#precioMax").focusout(function(){
+            filterResultsByPrice(currentArticles, 0, $(this).val());
+        });
+
 
         $("#select1").change(function() {
                 $('#select3').attr('disabled',true);
@@ -803,16 +823,29 @@
 
                 if (cat=="Franelas"){
                     cat="shirt";
+                    currentArticles=shirt;
+                    currentArticlesOriginal=shirt;
                 }else if(cat=="Faldas"){
                     cat="skirt";
+                    currentArticles=skirt;
+                    currentArticlesOriginal=skirt;
                 }else if(cat=="Zapatos Deportivos"){
                     cat="shoes";
+                    currentArticles=shoes;
+                    currentArticlesOriginal=shoes;
                 }else if(cat=="Jeans"){
                     cat="jeans";
-                } else {
-                    cat="shirt"
-                }
+                    currentArticles=jeans;
+                    currentArticlesOriginal=jeans;
                     
+                } else {
+                    cat="shirt";
+                    currentArticles=shirt;
+                    currentArticlesOriginal=shirt;
+                }
+                sortResults(currentArticles, "price", true)
+                  
+                /*  
                 for(var i = 1; i<=15; i++){
                         
                     $("#restodos"+i+" img").attr("src", "img/"+cat+i+".png");
@@ -823,7 +856,7 @@
                 for(var i = 1; i<=13; i++){
                     $("#res"+i+" img").fadeOut("fast").attr("src", "img/"+cat+i+".png").fadeIn("fast");
                     $("#res"+i).attr("href", "verProducto"+cat+"1.html")
-                }
+                }*/
 
                 
                     
